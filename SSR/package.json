@@ -1,0 +1,26 @@
+{
+  "name": "vanilla-ssr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --experimental-modules server/index.mjs",
+    "dev": "parcel views/index.html -p 4000",
+    "build": "yarn clean && parcel build views/index.html",
+    "clean": "rm -rf ./dist",
+    "ssr": "node --experimental-modules server/ssr/index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/puppeteer": "^1.12.1",
+    "nodemon": "^1.18.10",
+    "parcel": "^1.11.0",
+    "puppeteer": "^1.12.2"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
